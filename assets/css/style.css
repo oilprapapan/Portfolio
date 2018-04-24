@@ -1,0 +1,255 @@
+
+/*1.Section Navbar*/
+html ,body{
+    height: 100%;
+    font-family: 'Vidaloka', serif;
+}
+h1{
+    text-align: center;
+}
+.bg-alpha{
+    background: rgba(0, 0, 0, 0.5)
+}
+.navbar{
+    padding: 20px;
+    transition: 0.5s; /* ให้มันแสดงช้าลง 0.5วิ*/
+}
+
+/*2.Section page title*/
+.page-title{
+    position: relative;
+    display: block;
+    padding-top:250px;
+    padding-bottom: 250px;
+    color: papayawhip;
+}
+.display-4{
+    padding-bottom: 100px;
+}
+
+/*3.Section Timeline*/
+.timeline{
+    list-style: none;
+    position: relative;
+    padding: 20px 0 ;
+}
+.timeline > li{
+    position: relative;
+    margin-bottom: 40px;
+}
+.timeline::before{
+    content: "";
+    width: 3px;
+    background:#ccd5db;
+    position: absolute;
+    top:0;
+    left: 50%;
+    bottom: 0;
+    margin-left: -1.5px;
+}
+li>.timeline-badge{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 3px solid#f0ad4e ; /*เส้นหนา 3px เส้นทึบสี..*/
+    left: 50%; /*จัดให้อยู่ตรงกลางแบบเลยๆไปนิดนึง*/
+    margin-left: -9px; /*จัดให้อยู่ตรงกลาง ลบครึ่งนึงของ width*/
+    border-radius: 50%; /*ทำวงกลม*/
+    background: #ffffff; 
+    top:15px; /*ความสูง*/
+    box-shadow: 0 0 0 5px #ffffff; /*ทำเงาสีขาว ให้เส้น กับวงกลมห่างกัน*/
+}
+li>.timeline-badge::before{    /* สร้างเส้นอีกเส้นนึง*/
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 20px; /*มาทางซ้าย20px*/
+    width: 25px;
+    height: 2px;
+    background: #f0ad4e;
+}
+li.inverted > .timeline-badge::before{
+    right: -32px;  /* ย้ายเส้นไปทางซ้าย*/
+}
+li>.timeline-badge p{     /*จัดตำแหน่งของข้อความ*/
+    width: 250px; /*ความยาวของที่ที่ ขอความจะอยู่*/
+    margin-top: -9px;
+    margin-left: 25px;
+    font-size: 17px;
+    font-weight: bold;
+}
+li.inverted >.timeline-badge p{     
+    float: right; /* ย้ายไปทางขวา*/
+    text-align: right;
+    margin-right: 25px; /* ทำให้ออกห่าง*/
+}
+li>.timeline-card{
+    position: relative;/*ข้อความที่อยู่ด้านในจะไม่เกินมาข้างนอก*/
+    width: 46%;
+    float: left; /*ข้อคงามลอยชิด*/
+    text-align: right; /*ข้อความอยู่ทางด้านขวา*/
+    padding: 0 10px; /*บน-ล่าง ไม่เอา 0 10 คือซ้ายขวา*/
+}
+li.inverted>.timeline-card{
+    float: right; /* ย้ายไปทางขวา*/
+    text-align: left;/* ย้ายไปทางซ้าย*/
+}
+.timeline > li::after{
+    content: "";
+    clear: both; /*เคลีย*/
+    display: block; /*ขึ้นบรรทัดใหม่*/
+}
+.timeline-arrow{
+    widows: 100%;
+    text-align: center;
+    bottom: -70px;
+    color: #ccd5db;
+}
+@media(max-width:768px){
+    .timeline::before,.timeline-badge {
+        left: 40px !important;
+    }
+    .timeline-badge::before{
+        right: -32px !important;
+    }
+    .timeline-badge p,
+    li.inverted>.timeline-badge p{
+        margin-left: 50px !important; 
+        text-align: left;
+        float: left;
+    }
+    li>.timeline-card{
+        width: 100%;
+        text-align: left;
+        padding:37px 0 0 85px; /* บน ขวา ล่าง ซ้าย*/
+    }
+    .timeline-arrow{
+        text-align: left;
+        left: 32px; 
+    }
+    .display-4 {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+}
+
+/*4.Section bar*/
+.textbox {
+    height: 700px;
+}
+  
+.progress {
+    margin-bottom: 10px;
+}
+.progress-bar {
+    width: 0;
+}
+.progress .progress-bar {
+    animation-name: animateBar;
+    animation-timing-function: ease-in--out;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes animateBar {
+      0% {transform: translateX(-100%);}
+      100% {transform: translateX(0);}
+}
+@keyframes increase {
+    from {
+      width: 1%
+    }
+    to {
+      width: 1%
+    }
+}
+
+.bg-bar1{
+      background:#f16529;
+  }
+.bg-bar2{
+    background: #379ad6;
+}
+.bg-bar3{
+    background: #777bb4;
+}
+.bg-bar4{
+    background: #d6ba32;
+}
+.bg-bar5{
+    background: #0868ab;
+}
+.bg-bar6{
+    background: #f05033;
+}
+
+ /*4.1 Section TECHNOLOGY*/
+  .warpper-card-img{
+    position: relative;
+    overflow: hidden;
+}
+.warpper-card-img::after{
+    content: '';
+    padding-top: 56.25%;
+    display: block;
+    height: 0;
+}
+.warpper-card-img img{
+    position: absolute;
+    top: 50px;
+    transition: 1.5s;
+}
+.warpper-card-img img:hover{
+  transform: scale(1.8);
+
+}
+
+/*5.Section About me*/
+.wrapper {
+    text-align: center;
+  } 
+.image-cover {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 20px;
+    object-fit: cover;
+    object-position: center right;
+  }
+  .border-short-bottom{
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.border-short-bottom::after {
+    position: absolute;
+    content: "";
+    width: 250px;
+    height: 1.5px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -125px;
+    background: #dbdbdb;
+}
+.text-line{
+    color:#000;
+}
+.has-text-centered{
+    padding: 20px;
+    text-align: center;
+}
+.has-text-centered a{
+    color: #6d6969;
+}
+
+/*6.Section About me*/
+.footer{
+    background: #000000;
+    color: #ffffff;
+    font-size: 0.7rem;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+}

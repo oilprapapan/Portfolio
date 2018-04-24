@@ -1,0 +1,22 @@
+{
+  "name": "port",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.1.0",
+    "font-awesome": "^4.7.0",
+    "jarallax": "^1.10.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "startbootstrap-scrolling-nav": "^4.0.0",
+    "typed.js": "^2.0.6",
+    "yarn": "^1.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
